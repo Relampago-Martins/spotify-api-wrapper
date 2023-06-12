@@ -6,3 +6,6 @@ six==1.16.0
 uplink==0.9.7
 uritemplate==4.1.1
 urllib3==2.0.2
+async-timeout==4.0.2
+redis==4.5.5
+spotipy==2.23.0
