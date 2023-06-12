@@ -1,10 +1,13 @@
 """Conf file for the Spotify API."""
+import os
 from spotipy.oauth2 import SpotifyOAuth
+from dotenv import load_dotenv
 
+load_dotenv()
 
-SCOPE = "user-library-read, user-top-read, user-read-recently-played user-read-currently-playing"
-CLIENT_ID='be238fff4cba4a93b09c30f2abc1fcad'
-CLIENT_SECRET='75bc722ada324380a5e85b0a6c946787'
+CLIENT_ID= os.getenv('CLIENT_ID')
+CLIENT_SECRET= os.getenv('CLIENT_SECRET')
+SCOPE = "user-library-read, user-top-read, user-read-recently-played, user-read-currently-playing"
 REDIRECT_URI='https://www.google.com.br'
 
 def get_token():
